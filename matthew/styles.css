@@ -1,0 +1,245 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+/* Gradient Background Animation */
+.gradient-bg {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed, #9333ea);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s ease infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Auth Container Animation */
+#auth-container {
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Form Elements */
+input, select, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+    border-color: #6366f1;
+}
+
+/* Button Animations */
+button {
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Dashboard Animations */
+#dashboard-container {
+    opacity: 0;
+    animation: slideIn 0.5s ease-out forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Sidebar Navigation */
+.nav-link {
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.nav-link:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 4px;
+    background-color: #4f46e5;
+    transform: scaleY(0);
+    transform-origin: bottom;
+    transition: transform 0.3s ease;
+}
+
+.nav-link:hover:before {
+    transform: scaleY(1);
+}
+
+.nav-sub-link {
+    transition: all 0.2s ease;
+}
+
+.nav-sub-link:hover {
+    background-color: #f3f4f6;
+    padding-left: 1.5rem;
+}
+
+/* Card Hover Effects */
+.bg-white.rounded-lg.shadow {
+    transition: all 0.3s ease;
+}
+
+.bg-white.rounded-lg.shadow:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Table Row Animation */
+tbody tr {
+    transition: all 0.2s ease;
+}
+
+tbody tr:hover {
+    background-color: #f9fafb;
+    transform: scale(1.01);
+}
+
+/* Progress Bar Animation */
+.progress-bar {
+    transition: width 0.6s ease;
+}
+
+/* Survey Question Animation */
+.survey-question {
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: questionAppear 0.5s ease forwards;
+}
+
+@keyframes questionAppear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section Animation */
+.survey-section {
+    animation: sectionAppear 0.5s ease-out;
+}
+
+@keyframes sectionAppear {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Toggle Animation */
+.hidden {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Modal Animation */
+.modal {
+    animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pulse Animation for Notifications */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Loading Spinner */
+.spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Fade Transition for Content Switching */
+.content-transition {
+    animation: fadeTransition 0.5s ease-out;
+}
+
+@keyframes fadeTransition {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Bounce Animation for Call-to-Action */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+.bounce {
+    animation: bounce 2s infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    #dashboard-container {
+        animation: none;
+        opacity: 1;
+    }
+    
+    .gradient-bg {
+        animation: none;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c7d2fe;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a5b4fc;
+}

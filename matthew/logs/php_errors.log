@@ -1,0 +1,4 @@
+[03-Sep-2025 19:13:48 Africa/Lagos] PHP Warning:  include(footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\matthew\login.php on line 107
+[03-Sep-2025 19:13:48 Africa/Lagos] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\matthew\login.php on line 107
+[03-Sep-2025 19:13:58 Africa/Lagos] PHP Warning:  include(footer.php): Failed to open stream: No such file or directory in C:\xampp\htdocs\matthew\login.php on line 107
+[03-Sep-2025 19:13:58 Africa/Lagos] PHP Warning:  include(): Failed opening 'footer.php' for inclusion (include_path='C:\xampp\php\PEAR') in C:\xampp\htdocs\matthew\login.php on line 107
